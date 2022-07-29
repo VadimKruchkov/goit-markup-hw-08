@@ -1,0 +1,93 @@
+:root {
+  --primary-text-color: #212121;
+  --secondary-text-color: #757575;
+  --mainwhite-color: #ffffff;
+  --color-text-footer: rgba(255, 255, 255, 0.6);
+  --accent-color: #2196f3;
+  --hover-color: #188ce8;
+  --primary-bg-color: #e5e5e5;
+  --secondary-bg-color: #f5f4fa;
+  --hero-bg-color: #2f303a;
+  --icon-color: #afb1b8;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: var(--primary-text-color);
+  background-color: var(--mainwhite-color);
+  margin: 0%;
+}
+
+.list {
+  list-style: none;
+}
+
+button {
+  border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  @media screen and (max-width: 767px) {
+    width: 450px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @media screen and (max-width: 1199px) {
+    width: 738px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.section {
+  @media screen and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+/*--logo---------------------------------------*/
+nav {
+  display: flex;
+  align-items: center;
+}
+.nav__logo {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1, 19;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  text-decoration: none;
+  padding: 16px 0;
+}
+
+.nav__logo--accent {
+  color: var(--accent-color);
+}
