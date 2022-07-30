@@ -31,14 +31,14 @@
             aria-controls="menu-container"
             data-menu-open
           >
-            <svg class="menu-button__icon" width="24" height="16">
+            <svg class="menu-button__icon" width="40" height="40">
               <use
                 href="./images/icons.svg#icon-menu_mobile"
                 class="icon-menu"
               ></use>
             </svg>
           </button>
-
+          <!-------------------Header-nav--destop--------------->
           <div class="menu-desktop">
             <nav class="navigation">
               <ul class="navigation__list">
@@ -82,12 +82,12 @@
             </ul>
           </div>
         </div>
-
+        <!-------------------Mobile-modal--------------------->
         <div class="menu-container" id="menu-container" data-menu>
           <button type="button" class="close-menu" data-menu-close>
-            <svg class="menu-button__icon" width="24" height="16">
+            <svg class="menu-button__icon" width="40" height="40">
               <use
-                href="./images/icons.svg#icon-close-mobile"
+                href="./images/icons.svg#icon-close-mob-menu"
                 class="icon-cross"
               ></use>
             </svg>
@@ -146,12 +146,12 @@
         </div>
       </div>
     </header>
-
+    <!---------------Modal---------------------------->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-button" data-modal-close>
-          <svg class="icon-close" width="11px" height="11px">
-            <use href="./images/icons.svg#icon-close"></use>
+          <svg class="icon-close" width="50px" height="50px">
+            <use href="./images/icons.svg#icon-close-modal"></use>
           </svg>
         </button>
         <p class="modal__text">Залиште свої дані, ми вам передзвонимо</p>
@@ -177,7 +177,7 @@
               id="user-tel"
             />
             <svg class="form-icon" width="18px" height="18px">
-              <use href="./images/icons.svg#icon-phone-black"></use>
+              <use href="./images/icons.svg#icon-phone"></use>
             </svg>
           </label>
           <label for="user-emal" class="form-modal__label">
@@ -189,7 +189,7 @@
               id="user-emal"
             />
             <svg class="form-icon" width="18px" height="18px">
-              <use href="./images/icons.svg#icon-email-black"></use>
+              <use href="./images/icons.svg#icon-email"></use>
             </svg>
           </label>
           <label for="comment" class="form-modal__label">
@@ -214,13 +214,13 @@
               <span class="conditions__text"
                 >Погоджуюся з розсилкою та приймаю
                 <a href="./index.html" class="conditions__link"
-                  >Умови договора</a
+                  >Умови договору</a
                 ></span
               >
               <span class="conditions_checkbox-box--nochecked"></span>
               <span class="conditions_checkbox-box">
                 <svg class="agree-icon" width="11px" height="8px">
-                  <use href="./images/icons.svg#icon-agree"></use>
+                  <use href="./images/icons.svg#icon-checkbox-check"></use>
                 </svg>
               </span>
             </label>
@@ -231,6 +231,7 @@
       </div>
     </div>
     <main>
+      <!-------------------Hero----------------------------->
       <section class="hero-section">
         <h1 class="hero-section__title">
           Ефективні рішення <br />
@@ -240,7 +241,7 @@
           Замовити послугу
         </button>
       </section>
-
+      <!-------------------Benefits------------------------->
       <section class="benefits-section">
         <div class="container">
           <h2 class="section-title-hidden">Переваги</h2>
@@ -295,7 +296,7 @@
           </ul>
         </div>
       </section>
-
+      <!-------------------Activites------------------------>
       <section class="activities-section">
         <div class="container">
           <h2 class="section-title">Чим ми займаємось</h2>
@@ -345,7 +346,7 @@
           </ul>
         </div>
       </section>
-
+      <!-------------------Team----------------------------->
       <section class="team-section">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
@@ -374,7 +375,7 @@
                   "
                 />
                 <img
-                  src="./images/comanda/igorfoto.jpg"
+                  src="./images/1200/igor1200.jpg"
                   alt="foto igor designer"
                   class="team-section__img"
                 />
@@ -438,7 +439,7 @@
                   "
                 />
                 <img
-                  src="./images/comanda/olgafoto.jpg"
+                  src="./images/1200/olga1200.jpg"
                   alt="foto olga developer"
                   class="team-section__img"
                 />
@@ -502,7 +503,7 @@
                   "
                 />
                 <img
-                  src="./images/comanda/nikolayfoto.jpg"
+                  src="./images/1200/nikolay1200.jpg"
                   alt="foto nikolay marketing"
                   class="team-section__img"
                 />
@@ -566,7 +567,7 @@
                   "
                 />
                 <img
-                  src="./images/comanda/michailfoto.jpg"
+                  src="./images/1200/mixay1200.jpg"
                   alt="foto michail designer"
                   class="team-section__img"
                 />
@@ -609,7 +610,7 @@
           </ul>
         </div>
       </section>
-
+      <!-------------------Clients-------------------------->
       <section class="clients-section">
         <div class="container">
           <h2 class="section-title section-title__team">Постійні клієнти</h2>
@@ -660,7 +661,7 @@
         </div>
       </section>
     </main>
-
+    <!-------------------Footer--------------------------->
     <footer class="footer" id="contacts">
       <div class="container">
         <div class="footer-container">
@@ -750,6 +751,6 @@
     </footer>
 
     <script src="./js/modal.js"></script>
-    <script src="./js/menu.js"></script>
+    <script src="./js/menu_mobile.js"></script>
   </body>
 </html>

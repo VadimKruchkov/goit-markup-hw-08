@@ -48,6 +48,7 @@
   right: 8px;
   width: 30px;
   height: 30px;
+  padding: 0;
   background-color: transparent;
   border-radius: 50%;
   @include bordered($button-close);
@@ -60,6 +61,8 @@
 }
 .icon-close {
   fill: currentColor;
+  width: 30px;
+  height: 30px;
 }
 .modal__text {
   text-align: center;
@@ -167,7 +170,6 @@
   width: 16px;
   height: 15px;
   border-radius: 2px;
-  // @include bordered ($primary-text-color);
   @include transition(opacity);
 }
 .agree-icon {

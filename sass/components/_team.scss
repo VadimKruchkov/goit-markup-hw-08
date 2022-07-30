@@ -45,6 +45,10 @@
     &:not(:first-child) {
       margin-left: 30px;
     }
+    & {
+      width: 270px;
+      height: 428px;
+    }
   }
 }
 .team-section__subtitle {

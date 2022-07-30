@@ -109,10 +109,10 @@ address {
   border-radius: 50%;
   background-color: $bg-social-links;
   @include transition(background-color);
-  .call-to-action__link:hover,
-  .call-to-action__link:focus {
-    background-color: $accent-color;
-  }
+}
+.call-to-action__link:hover,
+.call-to-action__link:focus {
+  background-color: $accent-color;
 }
 .subscription {
   @media screen and (max-width: 1199px) {
