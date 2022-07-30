@@ -1,0 +1,122 @@
+.menu-button {
+  border: none;
+  width: 40px;
+  height: 40px;
+  padding: 12px 8px;
+  color: $primary-text-color;
+  background-color: transparent;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  @include transition(color);
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.menu-button__icon,
+.close-menu {
+  fill: currentColor;
+}
+.close-menu {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding: 11px 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.menu-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 40px;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1001;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  // pointer-events: none;
+  background-color: $main-white-color;
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    @include transition(opacity);
+  }
+}
+.mobile-menu__list {
+  @extend %list;
+}
+.mobile-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.mobile-menu__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  color: $primary-text-color;
+  @include transition(color);
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.mobile-menu__link--current {
+  color: $accent-color;
+}
+.mobile-contacts__list {
+  @extend %list;
+  margin-bottom: 64px;
+}
+.mobile-contacts__link {
+  text-decoration: none;
+  font-weight: 500;
+}
+.mobile-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.mobile-contacts__link--phone {
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: $accent-color;
+}
+.mobile-contacts__link--email {
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: $secondary-text-color;
+}
+.mobile-social {
+  display: flex;
+  flex-wrap: wrap;
+  @extend %list;
+  &__item:not(:last-child) {
+    padding-right: 10px;
+    border-right: 1px solid $border-modal;
+    .mobile-social__item:not(:first-child) {
+      padding-left: 10px;
+      border-left: 1px solid $border-modal;
+    }
+    .mobile-social__link {
+      text-decoration: none;
+      color: $accent-color;
+      font-size: 18px;
+      line-height: 1.22;
+      letter-spacing: 0.02em;
+    }
+  }
+}

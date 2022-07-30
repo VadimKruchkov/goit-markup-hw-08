@@ -1,0 +1,97 @@
+.team-section {
+  background-color: $secondary-bg-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.section-title__team {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 30px;
+  }
+}
+.team-section__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @extend %list;
+}
+.team-section__item {
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: $main-white-color;
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    width: 450px;
+  }
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 354px;
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
+    &:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &:not(:first-child) {
+      margin-left: 30px;
+    }
+  }
+}
+.team-section__subtitle {
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+.team-section__text {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $secondary-text-color;
+}
+.team-section__meta {
+  padding-top: 30px;
+}
+.socialcontacts__list {
+  @include centeredFlex(flex);
+  @extend %list;
+  padding-top: 16px;
+  padding-bottom: 24px;
+}
+.socialcontacts__item {
+  width: 44px;
+  height: 44px;
+}
+.socialcontacts__item:not(:first-child) {
+  margin-left: 10px;
+}
+.socialcontacts__link {
+  @include centeredFlex(flex);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  color: $icon-color;
+  @include transition(color);
+  @include transition(background-color);
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $main-white-color;
+  }
+}
+.team-icon {
+  fill: currentColor;
+}

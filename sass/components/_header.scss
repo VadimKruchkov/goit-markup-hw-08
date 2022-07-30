@@ -1,0 +1,144 @@
+.header {
+  border-bottom: 1px solid $border-footer;
+}
+.header-container {
+  display: flex;
+  height: 80px;
+  @media screen and (max-width: 767px) {
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+}
+.logo {
+  display: block;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-left: 0;
+  color: $primary-text-color;
+  @media screen and (min-width: 768px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+  &__text {
+    color: $accent-color;
+  }
+}
+.menu-desktop {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+.navigation {
+  @include centeredFlex(flex);
+  margin-left: 88px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
+  &__list {
+    @include centeredFlex(flex);
+    @extend %list;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+  &__link {
+    position: relative;
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: $primary-text-color;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+    @include transition(color);
+  }
+}
+
+.navigation__link--current {
+  color: $accent-color;
+}
+.navigation__link--current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 4px;
+  background-color: $accent-color;
+  border-radius: 2px;
+}
+.header-contacts {
+  @extend %list;
+  margin-left: 84px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    margin-left: 305px;
+  }
+}
+.header-contacts__item {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+.header-contacts__link {
+  @include centeredFlex(inline-flex);
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $secondary-text-color;
+  @include transition(color);
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    font-size: 12px;
+  }
+}
+.header-icon {
+  fill: currentColor;
+  @media screen and (min-width: 768px) {
+    margin-right: 8px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+  }
+}

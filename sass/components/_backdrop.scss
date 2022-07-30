@@ -1,0 +1,209 @@
+.backdrop {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $backdrop;
+  opacity: 1;
+  @include transition(opacity);
+}
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0px 2px rgba(0, 0, 0, 0.2), 0px 1px rgba(0, 0, 0, 0.14),
+    0px 1px rgba(0, 0, 0, 0.12);
+  background-color: $main-white-color;
+  transform: translate(-50%, -50%);
+  @include transition(transform);
+  @media screen and (max-width: 480px) {
+    width: 95%;
+  }
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    height: 609px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
+}
+.backdrop.is-hidden.modal {
+  transform: translate(-50%, -50%), translateX(-100%);
+  @include transition(transform);
+}
+.close-button {
+  position: absolute;
+  @include centeredFlex(flex);
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  @include bordered($button-close);
+  @include transition(color);
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    cursor: pointer;
+  }
+}
+.icon-close {
+  fill: currentColor;
+}
+.modal__text {
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  margin-top: 2px;
+  margin-bottom: 30px;
+}
+.form-modal__label {
+  position: relative;
+  display: block;
+  margin-bottom: 28px;
+}
+.form-modal__input {
+  width: 100%;
+  height: 40px;
+  padding-left: 35px;
+  border-radius: 4px;
+  @include bordered($border-modal);
+  @include transition(color);
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+    border-color: $accent-color;
+  }
+}
+.form-modal__title {
+  position: absolute;
+  top: -20px;
+  left: 0px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  color: $secondary-text-color;
+}
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-left: 12px;
+  transform: translateY(-50%);
+  @include transition(color);
+}
+.form-modal__input:focus ~ .form-icon {
+  fill: $accent-color;
+}
+.form-modal__textarea {
+  resize: none;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 4px;
+  @include bordered($border-modal);
+  @include transition(color);
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+    border-color: $accent-color;
+  }
+}
+.form-modal__label:nth-last-child(2) {
+  margin-bottom: 20px;
+}
+.form-modal__label::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  color: $label-modal;
+}
+
+.conditions {
+  @include centeredFlex(flex);
+  flex-wrap: wrap;
+}
+.conditions__label {
+  position: relative;
+  @include centeredFlex(flex);
+  padding-left: 24px;
+}
+.conditions__checkbox-input {
+  appearance: none;
+  position: absolute;
+  &:checked ~ .conditions_checkbox-box {
+    opacity: 1;
+  }
+}
+.conditions_checkbox-box--nochecked {
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  left: 0;
+  border-radius: 2px;
+  @include bordered($primary-text-color);
+}
+.conditions_checkbox-box {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  opacity: 0;
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  // @include bordered ($primary-text-color);
+  @include transition(opacity);
+}
+.agree-icon {
+  @include centeredFlex(flex);
+  background-color: $accent-color;
+  fill: $main-white-color;
+  border-radius: 2px;
+  width: 16px;
+  height: 15px;
+}
+.conditions__text {
+  color: $secondary-text-color;
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+  }
+}
+.conditions__link {
+  color: $accent-color;
+}
+.modal__button {
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  font-family: "Roboto", sans-serif;
+  margin-top: 30px;
+  border: none;
+  border-radius: 4px;
+  background-color: $hover-button;
+  color: $main-white-color;
+  @include transition(color);
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    cursor: pointer;
+  }
+}

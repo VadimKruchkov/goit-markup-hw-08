@@ -1,0 +1,37 @@
+.activities-section {
+  @media (max-width: 1199px) {
+    display: none;
+  }
+  @extend %section;
+  padding-top: 0;
+}
+
+.activities-section__list {
+  @include centeredFlex(flex);
+  @extend %list;
+}
+.activities-section__item {
+  position: relative;
+  border: none;
+  max-height: 294px;
+}
+.activities-section__item:not(:first-child) {
+  margin-left: 30px;
+}
+.activities-section__wrapper {
+  @include centeredFlex(flex);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  background-color: $wrapper-activities;
+}
+.activities-section__text {
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: $main-white-color;
+}
